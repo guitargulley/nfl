@@ -22,6 +22,7 @@ var PlayerController = function () {
     console.log(filteredPlayers)
     document.forms["filter-position-form"].reset()
     document.forms["filter-lastName-form"].reset()
+    page = 1
     draw()
   }
   this.setPage = function setPage(num){
@@ -36,6 +37,7 @@ var PlayerController = function () {
     console.log(filteredPlayers)
     document.forms["filter-team-form"].reset()
     document.forms["filter-lastName-form"].reset()
+    page = 1
     draw()
 
   }
@@ -51,7 +53,7 @@ var PlayerController = function () {
     console.log(filteredPlayers)
     document.forms["filter-position-form"].reset()
     document.forms["filter-team-form"].reset()
-  
+    page = 1
     draw()
   }
 
