@@ -45,7 +45,6 @@ body{
     padding-top:15px;
     padding-bottom: 15px;
 }
-.hold{
-    border:2px solid red;
-    
+button.active{
+    border: 1px solid red;
 }

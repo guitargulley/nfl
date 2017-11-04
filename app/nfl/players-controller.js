@@ -26,7 +26,9 @@ var PlayerController = function () {
     draw()
   }
   this.setPage = function setPage(num){
+    debugger
     page = num
+    document.getElementById("page"+page).classList.add('btn-danger')
     draw()
   }
 
@@ -93,7 +95,7 @@ var PlayerController = function () {
     var pageTemplate = ''
     for (var i = 1; i <= Object.keys(filteredPlayers).length; i++) {
       pageTemplate += `
-      <button onclick="app.controllers.playerController.setPage(${i})">${i}</button>
+      <button id="page${i}" onclick="app.controllers.playerController.setPage(${i})">${i}</button>
       
       `
       
