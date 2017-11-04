@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fantasy Foozeball</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 nfl-header text-center">
+                <h1>FANTASY FOOZEBALL</h1>
+                <h2>Pick your team!</h2>
+            </div>
+        </div>
+        <div class="row pages" >
+            <div class="col-xs-6 " id="pages">
+
+            </div>
+            
+            
+            <div class="col-xs-6 text-right filter-button">
+                
+                <form id="filter-team-form"class="form-inline" onsubmit="app.controllers.playerController.getPlayersByTeam(event)">
+                    <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="teamName" placeholder="ie. SF, SEA, LAR" />
+                        <button type="submit" class="btn" id="filter-team">Filter By Team</button>
+                    </div>
+                </form>
+                
+                
+                <form id="filter-position-form"class="form-inline" onsubmit="app.controllers.playerController.getPlayersByPosition(event)">
+                    <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="position" placeholder="ie. QB, RB, DE" />
+                        <button type="submit" class="btn" id="filter-position">Filter By Position</button>
+                    </div>
+                </form>
+                
+                
+                
+                <form id="filter-lastName-form"class="form-inline" onsubmit="app.controllers.playerController.getPlayersByName(event)">
+                    <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="lastName" placeholder="ie. Brady, Bell" />
+                        <button type="submit" class="btn" id="filter-player">Filter By Last Name</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row roster-selection">
+            <div class="col-xs-3 col-xs-offset-3">
+                <button id="nfl-roster-btn"class="btn" onclick="app.controllers.playerController.displayNflRoster()">NFL ROSTER</button>
+            </div>
+            <div class="col-xs-3">
+                    <button id="my-roster-btn"class="btn" onclick="app.controllers.playerController.displayMyRoster()">MY ROSTER</button>
+                </div>
+        </div>
+        
+        <div class="row text-center">
+            <div class="col-xs-12 nfl-roster-header" id="nfl-roster-div">
+                <h2>NFL ROSTER</h2>
+            </div>
+        </div>
+        <div class="row" id="playerList">
+            <!-- <div class="col-xs-2 text-center players">
+                <img src="" alt="">
+                <h3>Player Name</h3>
+                <h4>Player team</h4>
+                <h4>player position</h4>
+            </div> -->
+        </div>
+        <div class="row text-center">
+            <div class="col-xs-12 myRoster-header hidden" id="my-roster-div">
+                <h2>YOUR TEAM</h2>
+            </div>
+        </div>
+        <div class="row text-center hidden" id="my-roster">
+
+
+
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="app/nfl/players-service.js"></script>
+    <script src="app/nfl/players-controller.js"></script>
+    <script src="app/init.js"></script>
+</body>
+
+</html>

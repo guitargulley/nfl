@@ -1,0 +1,51 @@
+body{
+    background-color:rgb(19, 80, 19);
+}
+.players{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 400px;
+    padding-top: 10px;
+    margin-top: 10px;
+    background-color: rgba(245, 245, 245, 0.637);
+}
+.players img{
+    width:200px;
+    height: 200px;
+    border: 1px solid black;
+}
+.nfl-header{
+    border: 2px solid white;
+    border-radius: 15px;
+    color:whitesmoke;
+    
+}
+.pages{
+    padding-top: 20px;
+}
+.nfl-roster-header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+}
+.myRoster-header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 15px; 
+}
+.filter-button button{
+    width: 175px;
+
+}
+.roster-selection{
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+.hold{
+    border:2px solid red;
+    
+}
