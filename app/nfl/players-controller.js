@@ -26,7 +26,7 @@ var PlayerController = function () {
     draw()
   }
   this.setPage = function setPage(num){
-    debugger
+    // debugger
     page = num
     document.getElementById("page"+page).classList.add('btn-danger')
     draw()
@@ -45,6 +45,9 @@ var PlayerController = function () {
   }
   this.addToRoster = function addToRoster(id){
     playerService.addToRoster(id, drawMine)
+  }
+  this.removeFromRoster = function removeFromRoster(id){
+    playerService.removeFromRoster(id, drawMine)
   }
 
   this.getPlayersByName = function getPlayersByName(e){

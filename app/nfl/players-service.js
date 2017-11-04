@@ -26,6 +26,16 @@ var PlayerService = function(callback){
       console.log(filteredPlayers)
       return filteredPlayers
     }
+    this.removeFromRoster = function (id,cb){
+      for (var i = 0; i < myRoster.length; i++) {
+        var player = myRoster[i];
+        if(player.id == id){
+          myRoster.splice(i, 1)
+        }
+        
+      }console.log(myRoster)
+      cb(myRoster)
+    }
     this.addToRoster = function (id, cb) {
       // debugger
       for (var i = 0;i < playersData.length; i++) {
@@ -92,7 +102,7 @@ var PlayerService = function(callback){
       }
       
       var url = "https://bcw-getter.herokuapp.com/?url=";
-      var endpointUri = "http://api.cbssports.com/fantasy/players/list?version=3.0&SPORT=football&response_format=json";
+      var endpointUri = "https://api.cbssports.com/fantasy/players/list?version=3.0&SPORT=football&response_format=json";
       var apiUrl = url + encodeURIComponent(endpointUri);
     
         $.getJSON(apiUrl, function(data){
